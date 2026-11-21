@@ -2,11 +2,11 @@
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.android.tools.build:gradle:8.2.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,10 +20,10 @@ buildscript {
         kotlin_version = '1.3.30'
 
         //android sdk
-        compile_sdk_version = 28
-        target_sdk_version = 28
+        compile_sdk_version = 34
+        target_sdk_version = 34
         min_sdk_version = 17
-        build_tools_version = "28.0.3"
+        build_tools_version = "34.0.0"
 
         version_code = 1000
         version_name = "1.0.0"
@@ -50,33 +50,39 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
-        maven { url 'https://dl.bintray.com/zouyuhan/maven' }
-        maven { url 'https://maven.fabric.io/public' }
+        mavenCentral()
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
-        classpath 'com.google.gms:google-services:4.2.0' // google-services plugin
-        classpath 'io.fabric.tools:gradle:1.28.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:8.2.1'
     }
 }
 
 allprojects {
+    tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
     repositories {
         google()
         mavenLocal()
-        jcenter()
-        maven { url 'https://dl.bintray.com/zouyuhan/maven' }
-        maven { url "https://jitpack.io" }
-        maven { url 'https://zendesk.jfrog.io/zendesk/repo' }
-        maven { url "http://dl.bintray.com/piasy/maven" }
-        maven { url 'http://developer.huawei.com/repo/' }
+        mavenCentral()
     }
 }
 
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+subprojects {
+    plugins.withId('com.android.base') {
+        android {
+            compileOptions {
+                sourceCompatibility JavaVersion.VERSION_11
+                targetCompatibility JavaVersion.VERSION_11
+            }
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }

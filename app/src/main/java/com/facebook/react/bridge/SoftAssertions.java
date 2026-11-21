@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -9,7 +9,7 @@
 
 package com.facebook.react.bridge;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 /**
  * Utility class to make assertions that should not hard-crash the app but instead be handled by the
  * Catalyst app {@link NativeModuleCallExceptionHandler}. See the javadoc on that class for
@@ -47,3 +47,4 @@ public class SoftAssertions {
     return instance;
   }
 }
+

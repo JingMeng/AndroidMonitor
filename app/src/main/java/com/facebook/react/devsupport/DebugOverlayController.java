@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -12,7 +12,7 @@ package com.facebook.react.devsupport;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.os.Build;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
@@ -64,3 +64,4 @@ import android.widget.FrameLayout;
     mFPSDebugViewContainer = null;
   }
 }
+

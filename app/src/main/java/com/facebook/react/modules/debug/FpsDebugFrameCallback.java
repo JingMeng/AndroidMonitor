@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -14,7 +14,7 @@ import com.facebook.infer.annotation.Assertions;
 import com.facebook.react.modules.core.ChoreographerCompat;
 import java.util.Map;
 import java.util.TreeMap;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 /**
  * Each time a frame is drawn, records whether it should have expected any more callbacks since
@@ -88,8 +88,7 @@ public class FpsDebugFrameCallback extends ChoreographerCompat.FrameCallback {
     long lastFrameStartTime = mLastFrameTime;
     mLastFrameTime = l;
 
-    // TODO: 2017/8/24 这里不知道什么含义
-    if (true) {
+    // TODO: 2017/8/24 杩欓噷涓嶇煡閬撲粈涔堝惈涔?    if (true) {
       mNumFrameCallbacksWithBatchDispatches++;
     }
 
@@ -197,3 +196,4 @@ public class FpsDebugFrameCallback extends ChoreographerCompat.FrameCallback {
     mTimeToFps = null;
   }
 }
+

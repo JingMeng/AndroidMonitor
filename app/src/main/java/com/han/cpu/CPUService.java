@@ -1,4 +1,4 @@
-package com.han.cpu;
+﻿package com.han.cpu;
 
 import android.app.Service;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.WindowManager;
@@ -83,3 +83,4 @@ public class CPUService extends Service {
     }
   }
 }
+

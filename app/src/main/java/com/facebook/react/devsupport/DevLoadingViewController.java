@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -23,7 +23,7 @@ import com.han.devtool.R;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Locale;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 /**
  * Controller to display loading messages on top of the screen. All methods are thread safe.
@@ -146,3 +146,4 @@ public class DevLoadingViewController {
     mIsVisible = visible;
   }
 }
+

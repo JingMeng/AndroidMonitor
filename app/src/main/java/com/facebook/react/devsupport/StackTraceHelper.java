@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
  *
@@ -16,7 +16,7 @@ import com.facebook.react.devsupport.interfaces.StackFrame;
 import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -241,3 +241,4 @@ public class StackTraceHelper {
     return stackTrace.toString();
   }
 }
+

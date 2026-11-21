@@ -1,11 +1,11 @@
-package com.facebook.infer.annotation;
+﻿package com.facebook.infer.annotation;
 
 /**
  * Created by hanjiahu on 2017/8/24.
  */
 import java.util.List;
 import java.util.Map;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 public class Assertions {
   public Assertions() {
@@ -83,3 +83,4 @@ public class Assertions {
     throw new AssertionError(var0);
   }
 }
+

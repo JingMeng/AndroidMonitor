@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'ezy.assist.settingscompat'
     compileSdkVersion compile_sdk_version
     buildToolsVersion build_tools_version
 
@@ -26,7 +27,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "com.android.support:appcompat-v7:$android_support_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 }
 
 

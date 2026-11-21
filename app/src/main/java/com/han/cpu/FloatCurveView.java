@@ -1,9 +1,9 @@
-package com.han.cpu;
+﻿package com.han.cpu;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
-import android.support.annotation.StringDef;
+import androidx.annotation.StringDef;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,7 +15,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * Description: <悬浮内存显示曲线图，M为内存单位>
+ * Description: <鎮诞鍐呭瓨鏄剧ず鏇茬嚎鍥撅紝M涓哄唴瀛樺崟浣?
  */
 
 public class FloatCurveView extends RelativeLayout {
@@ -113,3 +113,4 @@ public class FloatCurveView extends RelativeLayout {
     return false;
   }
 }
+

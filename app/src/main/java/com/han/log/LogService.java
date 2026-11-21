@@ -1,4 +1,4 @@
-package com.han.log;
+﻿package com.han.log;
 
 import android.app.Service;
 import android.content.ContentValues;
@@ -9,7 +9,7 @@ import android.graphics.PixelFormat;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.support.v4.widget.CursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
@@ -174,7 +174,7 @@ public class LogService extends Service {
     //&& filteredObjects.get(0).getTag().equalsIgnoreCase("ActivityManager")
     if (null != filteredObjects && filteredObjects.size() > 0 && filteredObjects.get(0).getTag().equalsIgnoreCase("ActivityManager")) {
       synchronized (mLock) {
-        //logLineList.addAll(filteredObjects);//TODO 每次添加数组数量为1
+        //logLineList.addAll(filteredObjects);//TODO 姣忔娣诲姞鏁扮粍鏁伴噺涓?
         EventBus.getDefault().post(new LogdEvent(filteredObjects.get(0)));
         insertData(filteredObjects.get(0).getLogOutput(),filteredObjects.get(0).getTimestamp());
       }
@@ -382,3 +382,4 @@ public class LogService extends Service {
     }
   }
 }
+
